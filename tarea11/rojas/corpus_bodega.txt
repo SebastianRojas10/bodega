@@ -1,0 +1,59 @@
+P: ¿A qué hora abren y cierran?
+R: De lunes a sábado atendemos de 7:00 a 21:00 y los domingos de 8:00 a 14:00.
+
+P: ¿Atienden los feriados?
+R: Sí, los feriados abrimos en horario de domingo, de 8:00 a 14:00; solo cerramos el 1 de enero y el 25 de diciembre.
+
+P: ¿A qué hora es mejor ir para no hacer cola?
+R: Entre 10:00 y 12:00 hay menos gente; de 7:00 a 8:30 y de 18:00 a 20:00 es la hora punta.
+
+P: ¿Aceptan Yape o Plin?
+R: Sí, aceptamos Yape y Plin al número que figura en el mostrador; muestre la constancia del pago antes de retirarse.
+
+P: ¿Puedo pagar con tarjeta?
+R: Por ahora no aceptamos tarjeta; solo efectivo, Yape o Plin.
+
+P: ¿Me pueden fiar?
+R: Solo a clientes frecuentes del barrio, con un máximo de S/ 50 y pago al final de la semana; se anota en el cuaderno de Rojas Castillo.
+
+P: ¿Hacen delivery?
+R: Sí, dentro de San Vicente de Cañete, de lunes a sábado de 9:00 a 19:00, pidiendo por WhatsApp.
+
+P: ¿Cuánto cuesta el delivery?
+R: S/ 3 dentro de San Vicente; es gratis si la compra supera los S/ 60.
+
+P: ¿Cuánto demora el delivery?
+R: Entre 30 y 45 minutos según la zona; en hora punta puede tardar hasta una hora.
+
+P: ¿Puedo devolver un producto vencido o en mal estado?
+R: Sí, lo cambiamos por otro igual o le devolvemos el dinero si lo trae con su boleta o constancia de pago dentro de las 48 horas.
+
+P: ¿Puedo cambiar un producto que compré por error?
+R: Sí, si está cerrado y en buen estado, el mismo día de la compra; productos refrigerados como la leche no tienen cambio.
+
+P: ¿Cuáles son los productos que más se venden?
+R: El arroz Costeño, el aceite Primor, la leche Gloria y la gaseosa Inca Kola son los más pedidos todos los días.
+
+P: ¿Cuánto cuesta el arroz Costeño?
+R: El kilo de arroz Costeño cuesta S/ 4,50; consulte el stock antes de pedir cantidades grandes.
+
+P: ¿Qué llevo para un desayuno sencillo?
+R: Le recomendamos leche Gloria a S/ 4,20 y azúcar rubia a S/ 3,80 el kilo; el pan llega fresco a las 6:30.
+
+P: ¿Tienen algún descuento?
+R: Sí, si su compra supera los S/ 100,00 le descontamos el 5 % del total automáticamente.
+
+P: Si mi compra es exactamente S/ 100, ¿tengo descuento?
+R: No, el descuento del 5 % se aplica solo cuando la compra pasa de S/ 100,00; con S/ 100,01 ya aplica.
+
+P: ¿Tienen ofertas por temporada?
+R: Sí, en fiestas patrias y en diciembre hay packs de gaseosa y panetón; se anuncian en la pizarra de la entrada.
+
+P: ¿Venden al por mayor?
+R: Sí, vendemos por saco de arroz y azúcar de 50 kg y por caja de aceite, leche y gaseosa, con precio especial.
+
+P: ¿Con cuánta anticipación debo hacer un pedido al por mayor?
+R: Con al menos dos días de anticipación por WhatsApp, para separar la mercadería o pedirla al proveedor.
+
+P: ¿Los pedidos al por mayor también tienen descuento?
+R: Sí, a los pedidos mayoristas se les aplica el 5 % si superan los S/ 100,00 y además el delivery es gratis.

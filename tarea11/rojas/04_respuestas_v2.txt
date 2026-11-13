@@ -1,0 +1,16 @@
+Pregunta 1: ¿Cuánto cuestan 3 leches?
+Herramientas usadas: productos (no usó Calculator; el modelo calculó 3 x 4,20 por sí mismo)
+Respuesta: Tres unidades de Leche Gloria cuestan $12.60.
+
+Pregunta 2: ¿Tienen aceite?
+Herramientas usadas: productos
+Respuesta: Tenemos Aceite Primor de 1 L a S/ 9.80, pero actualmente está sin stock.
+
+Pregunta 3: ¿Qué me recomiendas para el desayuno?
+Herramientas usadas: productos
+Respuesta: Te recomiendo un desayuno nutritivo con arroz costeño acompañado de una taza de leche Gloria.
+
+Observaciones:
+- La respuesta correcta de la pregunta 1 es S/ 12,60 (3 x 4,20); el agente usó "$" en lugar de "S/".
+- La pregunta 2 es correcta: en la herramienta productos el aceite tiene stock 0.
+- En la pregunta 3 el agente consultó los productos disponibles para recomendar.

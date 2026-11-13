@@ -1,0 +1,195 @@
+{
+  "name": "Consulta bodega – Rojas v2",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "bodega",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "fb8137ba-28c9-4838-99f8-e40448bc9513",
+      "name": "Webhook",
+      "webhookId": "4191e7c5-d5ca-459e-a5fd-059870b058a1"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "=   { \"respuesta\": {{ JSON.stringify($json.output) }} }",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        528,
+        48
+      ],
+      "id": "b333c4bc-0b25-4d9c-b013-6fb788825e56",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-120b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        160,
+        208
+      ],
+      "id": "d2fda2b1-f97f-4cc7-929b-a9b8539d0976",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "8ADKPQT55b5Zi1JB",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.pregunta }}",
+        "options": {
+          "systemMessage": "Eres el asistente de la bodega Rojas Castillo de San Vicente de Cañete. Responde en español, en una sola oración, con tono amable. Si no sabes la respuesta, dilo. Si la pregunta requiere cálculos, usa la herramienta de calculadora. Si requiere datos de productos, usa la herramienta de productos."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "1453a3c1-d24e-4b38-9f8d-a7a24fbd15de",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.body.cliente ?? 'anonimo' }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        288,
+        256
+      ],
+      "id": "cad62330-1e25-42f9-bb2d-80b7abfbed9b",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        384,
+        208
+      ],
+      "id": "32d4a36f-6d45-4dad-991f-fc3a36865bc8",
+      "name": "Calculator"
+    },
+    {
+      "parameters": {
+        "description": "Devuelve la lista de productos de la bodega con precio y stock",
+        "jsCode": "return JSON.stringify([{nombre:'Arroz Costeño 5 kg',precio:24.5,stock:12},{nombre:'Aceite Primor 1 L',precio:9.8,stock:0},{nombre:'Leche Gloria',precio:4.2,stock:30}]);"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        480,
+        304
+      ],
+      "id": "115aac47-9416-4b85-b326-9ddf74e8b4b9",
+      "name": "productos"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "productos": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "763d4b33-2f90-49b3-89c5-1a5c52a589eb",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "9c7f1da4bb6a92f5a3989b6457d0ad2ea146e4c07061b5ac5b63ee07d0b72cf6"
+  },
+  "nodeGroups": [],
+  "id": "Aaspau4ZxqVhab9g",
+  "tags": []
+}
