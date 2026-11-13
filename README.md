@@ -1,5 +1,7 @@
 # Bodega Doña Rosa
 
+**URL pública:** https://bodega-rojascastillo.infinityfreeapp.com/
+
 Aplicación PHP y MySQL para inventario y registro de ventas.
 
 ## Despliegue en InfinityFree

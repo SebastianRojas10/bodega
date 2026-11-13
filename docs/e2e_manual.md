@@ -16,7 +16,7 @@ Datos actuales: Atún Florida a S/ 6,50 con stock 18 y Aceite Primor a S/ 10,50 
 | 3 | Pulsar **Confirmar venta**. | Ninguno adicional. | Se muestra **Venta registrada correctamente.** y el detalle indica subtotal `S/ 108.00`, descuento `S/ 5.40` y total `S/ 102.60`. |
 | 4 | Pulsar **Ver inventario**. | Ninguno. | En `index.php`, Atún Florida muestra stock `3` (antes `18`) y Aceite Primor muestra `7` (antes `8`). |
 
-**Estado: pendiente con los datos actuales.** La variante de 15 Atunes y 1 Aceite (subtotal `S/ 108.00`, descuento `S/ 5.40`, total `S/ 102.60`, stocks esperados `3` y `7`) todavía no se ha ejecutado. La prueba que sí pasó fue la venta #5 de 20 Arroz Costeño y 2 Aceite Primor (subtotal `S/ 111.00`, descuento `S/ 5.55`, total `S/ 105.45`), que dejó el arroz agotado y Aceite Primor con stock `8`. No repetir esa venta anterior.
+**Ejecución 13/11: PASÓ.** Antes de la venta, `index.php` mostraba Atún Florida con stock `18` y Aceite Primor con stock `8`. Se registró la venta de 15 Atún Florida y 1 Aceite Primor (subtotal esperado `S/ 108.00`, descuento `S/ 5.40`, total `S/ 102.60`) y, al volver a `index.php`, Atún Florida quedó en `3` y Aceite Primor en `7`: el stock se redujo exactamente en las cantidades vendidas. La ejecución anterior (venta #5 de 20 Arroz Costeño y 2 Aceite Primor: subtotal `S/ 111.00`, descuento `S/ 5.55`, total `S/ 105.45`) también pasó y dejó el arroz agotado.
 
 ## Escenario 2 — Intento de vender más que el stock
 

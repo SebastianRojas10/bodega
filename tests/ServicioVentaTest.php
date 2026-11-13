@@ -73,4 +73,30 @@ class ServicioVentaTest extends TestCase
     {
         self::assertSame(null, ServicioVenta::parsearCantidad('1.5'));
     }
+
+    public function testAceptaVentaIgualAlStock(): void
+    {
+        self::assertSame(true, ServicioVenta::hayStock(10, 10));
+    }
+
+    public function testRechazaVentaDeUnoMasQueElStock(): void
+    {
+        self::assertSame(false, ServicioVenta::hayStock(11, 10));
+    }
+
+    public function testRechazaVentaDeProductoAgotado(): void
+    {
+        self::assertSame(false, ServicioVenta::hayStock(1, 0));
+    }
+
+    public function testSumaCantidadesDeLineasRepetidasDelMismoProducto(): void
+    {
+        $items = [
+            ['producto_id' => 3, 'cantidad' => 3],
+            ['producto_id' => 3, 'cantidad' => 2],
+            ['producto_id' => 5, 'cantidad' => 1],
+        ];
+
+        self::assertSame([3 => 5, 5 => 1], ServicioVenta::agruparCantidadesPorProducto($items));
+    }
 }
